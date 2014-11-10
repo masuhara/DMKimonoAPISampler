@@ -23,6 +23,7 @@
 
 - (void)setTitle:(NSString *)text
 {
+    // Label Setting
     titleLabel.numberOfLines = 0;
     titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     titleLabel.text = text;
