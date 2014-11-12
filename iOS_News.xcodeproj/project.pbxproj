@@ -30,6 +30,9 @@
 		AFBD24091A0F3AFF0005DA3B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24071A0F3AFF0005DA3B /* SVProgressHUD.m */; };
 		AFBD240B1A0F4C8D0005DA3B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBD240A1A0F4C8D0005DA3B /* Default-568h@2x.png */; };
 		AFBD24101A0F53E10005DA3B /* Xcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBD240F1A0F53E10005DA3B /* Xcode@2x.png */; };
+		AFBD24141A11F5C90005DA3B /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24131A11F5C90005DA3B /* ContentViewController.m */; };
+		AFBD242D1A11F88C0005DA3B /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24221A11F88C0005DA3B /* SGProgressView.m */; };
+		AFBD242E1A11F88C0005DA3B /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,12 @@
 		AFBD24071A0F3AFF0005DA3B /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		AFBD240A1A0F4C8D0005DA3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFBD240F1A0F53E10005DA3B /* Xcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Xcode@2x.png"; sourceTree = "<group>"; };
+		AFBD24121A11F5C90005DA3B /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		AFBD24131A11F5C90005DA3B /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		AFBD24211A11F88C0005DA3B /* SGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGProgressView.h; sourceTree = "<group>"; };
+		AFBD24221A11F88C0005DA3B /* SGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProgressView.m; sourceTree = "<group>"; };
+		AFBD24231A11F88C0005DA3B /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
+		AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,8 @@
 				AFBD24001A0F389B0005DA3B /* TipsCollectionViewCell.h */,
 				AFBD24011A0F389B0005DA3B /* TipsCollectionViewCell.m */,
 				AFBD23BA1A0E42870005DA3B /* Main.storyboard */,
+				AFBD24121A11F5C90005DA3B /* ContentViewController.h */,
+				AFBD24131A11F5C90005DA3B /* ContentViewController.m */,
 				AFBD23BD1A0E42870005DA3B /* Images.xcassets */,
 				AFBD23BF1A0E42870005DA3B /* LaunchScreen.xib */,
 				AFBD23B01A0E42870005DA3B /* Supporting Files */,
@@ -201,6 +212,7 @@
 		AFBD23FF1A0F351C0005DA3B /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				AFBD24201A11F88C0005DA3B /* UINavigationController+SGProgress */,
 				AFBD24031A0F3AFF0005DA3B /* SVProgressHUD */,
 				AFBD23E21A0F35170005DA3B /* AFNetworking */,
 			);
@@ -235,6 +247,18 @@
 				AFBD23E01A0E440D0005DA3B /* RootTabBarViewController.m */,
 			);
 			name = Root;
+			sourceTree = "<group>";
+		};
+		AFBD24201A11F88C0005DA3B /* UINavigationController+SGProgress */ = {
+			isa = PBXGroup;
+			children = (
+				AFBD24211A11F88C0005DA3B /* SGProgressView.h */,
+				AFBD24221A11F88C0005DA3B /* SGProgressView.m */,
+				AFBD24231A11F88C0005DA3B /* UINavigationController+SGProgress.h */,
+				AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */,
+			);
+			name = "UINavigationController+SGProgress";
+			path = "SGNavigationProgress/UINavigationController+SGProgress";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFBD23FB1A0F35170005DA3B /* AFURLConnectionOperation.m in Sources */,
+				AFBD242D1A11F88C0005DA3B /* SGProgressView.m in Sources */,
 				AFBD23F61A0F35170005DA3B /* AFHTTPRequestOperation.m in Sources */,
 				AFBD23F91A0F35170005DA3B /* AFNetworkReachabilityManager.m in Sources */,
 				AFBD23FE1A0F35170005DA3B /* AFURLSessionManager.m in Sources */,
@@ -354,7 +379,9 @@
 				AFBD23F71A0F35170005DA3B /* AFHTTPRequestOperationManager.m in Sources */,
 				AFBD23FA1A0F35170005DA3B /* AFSecurityPolicy.m in Sources */,
 				AFBD23B31A0E42870005DA3B /* main.m in Sources */,
+				AFBD24141A11F5C90005DA3B /* ContentViewController.m in Sources */,
 				AFBD23DB1A0E42C90005DA3B /* TopViewController.m in Sources */,
+				AFBD242E1A11F88C0005DA3B /* UINavigationController+SGProgress.m in Sources */,
 				AFBD23F81A0F35170005DA3B /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +575,7 @@
 				AFBD23D21A0E42870005DA3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFBD23D31A0E42870005DA3B /* Build configuration list for PBXNativeTarget "iOS_NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +584,7 @@
 				AFBD23D51A0E42870005DA3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

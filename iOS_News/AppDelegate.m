@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+<UIAlertViewDelegate>
 
 @end
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Check App's Version
+    BOOL updated = [self checkAppVersion];
+    if (updated) {
+        [self updateAppVersion];
+    }
+    
     return YES;
 }
 
@@ -41,5 +49,32 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark - Private 
+- (BOOL)checkAppVersion
+{
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSLog(@"%@", version);
+    if ([version intValue] > 1.0) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+- (void)updateAppVersion
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"アプリのアップデート" message:@"新しいバージョンにアップデートします。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"アップデート", nil];
+    [alertView show];
+}
+
+#pragma mark - UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+}
+
+
 
 @end

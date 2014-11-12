@@ -94,8 +94,9 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kqB-Dt-sLM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xWB-aU-zvY">
-                                    <size key="itemSize" width="85" height="85"/>
+                                <inset key="scrollIndicatorInsets" minX="8" minY="8" maxX="0.0" maxY="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="xWB-aU-zvY">
+                                    <size key="itemSize" width="96" height="96"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
@@ -105,20 +106,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Xcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-5V-SYX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-5V-SYX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                    <color key="backgroundColor" red="0.97254901960784312" green="0.92156862745098034" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rht-OQ-dRv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-r9-CCj">
-                                                    <rect key="frame" x="0.0" y="55" width="85" height="30"/>
+                                                    <rect key="frame" x="0.0" y="55" width="96" height="46"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -138,16 +140,39 @@
                     <tabBarItem key="tabBarItem" title="記事一覧" id="hmi-C2-c42"/>
                     <connections>
                         <outlet property="newsCollectionView" destination="kqB-Dt-sLM" id="5K8-pW-ZYh"/>
+                        <segue destination="Spd-5a-6mq" kind="push" identifier="detail" id="Teb-7h-T5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQw-At-wZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-434" y="-173"/>
         </scene>
+        <!--Content View Controller-->
+        <scene sceneID="8nm-xL-EfH">
+            <objects>
+                <viewController id="Spd-5a-6mq" customClass="ContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9e9-IE-iKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vky-Z1-b59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hrs-N0-5QK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWL-WB-AQK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ELA-zp-zIu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwo-PP-4cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-174"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="Xcode.png" width="85" height="85"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

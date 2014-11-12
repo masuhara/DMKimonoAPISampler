@@ -33,13 +33,16 @@
     // AFNetwirking CacheDelete
     [self deleteAFNetworkingCache];
     
+    // AFNetworking Connection
+    [self getInformation];
+    
     // CollectionView Delegate & DataSource
     newsCollectionView.dataSource = self;
     newsCollectionView.delegate   = self;
     
-    // BackGroundColor
-    newsCollectionView.backgroundView = [self setBackgroundView:[UIColor whiteColor]];
-    self.view.backgroundColor = [UIColor whiteColor];
+    // BackGroundColor (Pastel White)
+    newsCollectionView.backgroundView = [self setBackgroundView:[UIColor colorWithRed:247/255.0f green:246/255.0f blue:252/255.0f alpha:1.0]];
+    self.view.backgroundColor = [UIColor colorWithRed:247/255.0f green:246/255.0f blue:252/255.0f alpha:1.0];
     
     
     // BackGroundImage
@@ -56,34 +59,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *params = @{@"count":@20};
-    [manager GET:@"https://www.kimonolabs.com/api/at66pv4o?apikey=lYvFFCKdhryhIifZUXQE48Xdeeqmgnie"
-      parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        //TODO:
-        jsonArray = [[responseObject valueForKey:@"results"] valueForKey:@"collection"];
-        
-        NSLog(@"JSON: %@", jsonArray);
-        numberOfArticle = (int)jsonArray.count;
-        
-        if ([[operation valueForKey:@"state"] intValue] == 3) {
-            //[SVProgressHUD dismiss];
-            [newsCollectionView reloadData];
-        }
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-        if (!error) {
-            //[SVProgressHUD dismiss];
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:@"データの取得に失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alertView show];
-            
-        }else{
-            //[SVProgressHUD dismiss];
-        }
-    }];
+    [super viewDidAppear:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,7 +101,10 @@
     
     
     [cell setTitle:titleArray[indexPath.row]];
-    [cell setImageView:[UIImage imageNamed:@"Xcode.png"]];
+    
+    // Sakura Color
+    [cell setBackgroundColor:[UIColor colorWithRed:248/255.0f green:235/255.0f blue:245/255.0f alpha:1.0]];
+    //[cell setImageView:[UIImage imageNamed:@"Xcode.png"]];
     
     return cell;
 }
@@ -135,11 +114,45 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Tapped ==> %d", (int)indexPath.row);
+    [self performSegueWithIdentifier:@"detail" sender:nil];
 }
 
 
 
 #pragma mark - AFNetworking
+- (void)getInformation
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //NSDictionary *params = @{@"count":@20};
+    [manager GET:@"https://www.kimonolabs.com/api/at66pv4o?apikey=lYvFFCKdhryhIifZUXQE48Xdeeqmgnie"
+      parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+          
+          //TODO:
+          jsonArray = [[responseObject valueForKey:@"results"] valueForKey:@"collection"];
+          
+          NSLog(@"JSON: %@", jsonArray);
+          numberOfArticle = (int)jsonArray.count;
+          
+          if ([[operation valueForKey:@"state"] intValue] == 3) {
+              //[SVProgressHUD dismiss];
+              [newsCollectionView reloadData];
+          }
+          
+      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+          NSLog(@"Error: %@", error);
+          
+          if (!error) {
+              //[SVProgressHUD dismiss];
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:@"データの取得に失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+              [alertView show];
+              
+          }else{
+              //[SVProgressHUD dismiss];
+          }
+      }];
+}
+
+
 - (void)deleteAFNetworkingCache
 {
     NSInteger diskCapacity = [NSURLCache sharedURLCache].diskCapacity;
@@ -154,6 +167,11 @@
     [newsCollectionView reloadData];
 }
 
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+}
 
 
 
