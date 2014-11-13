@@ -22,6 +22,7 @@
     UIImageView *cellImageView;
     UIImageView *cellBottomImageView;
     UILabel *cellTitleLabel;
+    UIRefreshControl *refreshControl;
     
     NSMutableArray *jsonArray;
     int numberOfArticle;
@@ -54,7 +55,16 @@
         jsonArray = [NSMutableArray new];
     }
     
+    // SVProgressHUD
     //[SVProgressHUD showWithStatus:@"読み込み中" maskType:SVProgressHUDMaskTypeGradient];
+    
+    // Pull to Refresh
+    newsCollectionView.alwaysBounceVertical = YES;
+    refreshControl = [UIRefreshControl new];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"更新中..."];
+    [refreshControl addTarget:self action:@selector(startRefresh:)
+             forControlEvents:UIControlEventValueChanged];
+    [newsCollectionView addSubview:refreshControl];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -120,9 +130,12 @@
 
 
 #pragma mark - AFNetworking
-- (void)getInformation
+- (BOOL)getInformation
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    __block BOOL loadSucceed = NO;
+    
     //NSDictionary *params = @{@"count":@20};
     [manager GET:@"https://www.kimonolabs.com/api/at66pv4o?apikey=lYvFFCKdhryhIifZUXQE48Xdeeqmgnie"
       parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -135,21 +148,26 @@
           
           if ([[operation valueForKey:@"state"] intValue] == 3) {
               //[SVProgressHUD dismiss];
+              loadSucceed = YES;
               [newsCollectionView reloadData];
           }
           
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"Error: %@", error);
           
-          if (!error) {
+          if (error) {
               //[SVProgressHUD dismiss];
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:@"データの取得に失敗しました。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:error.localizedDescription delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
               [alertView show];
               
           }else{
               //[SVProgressHUD dismiss];
           }
+          
+          loadSucceed = NO;
+          
       }];
+    return loadSucceed;
 }
 
 
@@ -157,15 +175,33 @@
 {
     NSInteger diskCapacity = [NSURLCache sharedURLCache].diskCapacity;
     NSInteger memoryCapacity = [NSURLCache sharedURLCache].memoryCapacity;
-    /* 0にする */
+    
     [NSURLCache sharedURLCache].diskCapacity = 0;
     [NSURLCache sharedURLCache].memoryCapacity = 0;
-    /* もとの大きさに戻す */
     [NSURLCache sharedURLCache].diskCapacity = diskCapacity;
     [NSURLCache sharedURLCache].memoryCapacity = memoryCapacity;
     
     [newsCollectionView reloadData];
 }
+
+#pragma mark - Refresh
+- (void)startRefresh:(id)sender
+{
+    [refreshControl beginRefreshing];
+    
+    BOOL isSucceed = [self getInformation];
+    
+    
+    if (isSucceed == YES) {
+        [newsCollectionView reloadData];
+        [refreshControl endRefreshing];
+    }else{
+        [newsCollectionView reloadData];
+        [refreshControl endRefreshing];
+    }
+    
+}
+
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
