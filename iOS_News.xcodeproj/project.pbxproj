@@ -33,6 +33,16 @@
 		AFBD24141A11F5C90005DA3B /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24131A11F5C90005DA3B /* ContentViewController.m */; };
 		AFBD242D1A11F88C0005DA3B /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24221A11F88C0005DA3B /* SGProgressView.m */; };
 		AFBD242E1A11F88C0005DA3B /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */; };
+		AFF5CB391A1948C4006BABBD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5CB381A1948C4006BABBD /* QuartzCore.framework */; };
+		AFF5CB7B1A195756006BABBD /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5CB711A195756006BABBD /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF5CB7C1A195756006BABBD /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB731A195756006BABBD /* blackArrow.png */; };
+		AFF5CB7D1A195756006BABBD /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB741A195756006BABBD /* blackArrow@2x.png */; };
+		AFF5CB7E1A195756006BABBD /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB751A195756006BABBD /* blueArrow.png */; };
+		AFF5CB7F1A195756006BABBD /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB761A195756006BABBD /* blueArrow@2x.png */; };
+		AFF5CB801A195756006BABBD /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB771A195756006BABBD /* grayArrow.png */; };
+		AFF5CB811A195756006BABBD /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB781A195756006BABBD /* grayArrow@2x.png */; };
+		AFF5CB821A195756006BABBD /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB791A195756006BABBD /* whiteArrow.png */; };
+		AFF5CB831A195756006BABBD /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +106,17 @@
 		AFBD24221A11F88C0005DA3B /* SGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProgressView.m; sourceTree = "<group>"; };
 		AFBD24231A11F88C0005DA3B /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
 		AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
+		AFF5CB381A1948C4006BABBD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFF5CB701A195756006BABBD /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		AFF5CB711A195756006BABBD /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		AFF5CB731A195756006BABBD /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		AFF5CB741A195756006BABBD /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		AFF5CB751A195756006BABBD /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		AFF5CB761A195756006BABBD /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		AFF5CB771A195756006BABBD /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		AFF5CB781A195756006BABBD /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		AFF5CB791A195756006BABBD /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF5CB391A1948C4006BABBD /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +181,7 @@
 		AFBD23B01A0E42870005DA3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFF5CB381A1948C4006BABBD /* QuartzCore.framework */,
 				AFBD240A1A0F4C8D0005DA3B /* Default-568h@2x.png */,
 				AFBD23B11A0E42870005DA3B /* Info.plist */,
 				AFBD23B21A0E42870005DA3B /* main.m */,
@@ -212,6 +235,7 @@
 		AFBD23FF1A0F351C0005DA3B /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				AFF5CB6D1A195756006BABBD /* EGOTableViewPullRefresh */,
 				AFBD24201A11F88C0005DA3B /* UINavigationController+SGProgress */,
 				AFBD24031A0F3AFF0005DA3B /* SVProgressHUD */,
 				AFBD23E21A0F35170005DA3B /* AFNetworking */,
@@ -259,6 +283,47 @@
 			);
 			name = "UINavigationController+SGProgress";
 			path = "SGNavigationProgress/UINavigationController+SGProgress";
+			sourceTree = "<group>";
+		};
+		AFF5CB6D1A195756006BABBD /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CB6E1A195756006BABBD /* Classes */,
+				AFF5CB721A195756006BABBD /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		AFF5CB6E1A195756006BABBD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CB6F1A195756006BABBD /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AFF5CB6F1A195756006BABBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CB701A195756006BABBD /* EGORefreshTableHeaderView.h */,
+				AFF5CB711A195756006BABBD /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFF5CB721A195756006BABBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CB731A195756006BABBD /* blackArrow.png */,
+				AFF5CB741A195756006BABBD /* blackArrow@2x.png */,
+				AFF5CB751A195756006BABBD /* blueArrow.png */,
+				AFF5CB761A195756006BABBD /* blueArrow@2x.png */,
+				AFF5CB771A195756006BABBD /* grayArrow.png */,
+				AFF5CB781A195756006BABBD /* grayArrow@2x.png */,
+				AFF5CB791A195756006BABBD /* whiteArrow.png */,
+				AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,9 +408,17 @@
 			files = (
 				AFBD24101A0F53E10005DA3B /* Xcode@2x.png in Resources */,
 				AFBD23BC1A0E42870005DA3B /* Main.storyboard in Resources */,
+				AFF5CB7F1A195756006BABBD /* blueArrow@2x.png in Resources */,
+				AFF5CB821A195756006BABBD /* whiteArrow.png in Resources */,
+				AFF5CB811A195756006BABBD /* grayArrow@2x.png in Resources */,
 				AFBD23C11A0E42870005DA3B /* LaunchScreen.xib in Resources */,
+				AFF5CB7E1A195756006BABBD /* blueArrow.png in Resources */,
 				AFBD23BE1A0E42870005DA3B /* Images.xcassets in Resources */,
+				AFF5CB801A195756006BABBD /* grayArrow.png in Resources */,
+				AFF5CB7C1A195756006BABBD /* blackArrow.png in Resources */,
 				AFBD240B1A0F4C8D0005DA3B /* Default-568h@2x.png in Resources */,
+				AFF5CB7D1A195756006BABBD /* blackArrow@2x.png in Resources */,
+				AFF5CB831A195756006BABBD /* whiteArrow@2x.png in Resources */,
 				AFBD24081A0F3AFF0005DA3B /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +449,7 @@
 				AFBD23E11A0E440D0005DA3B /* RootTabBarViewController.m in Sources */,
 				AFBD24091A0F3AFF0005DA3B /* SVProgressHUD.m in Sources */,
 				AFBD23B61A0E42870005DA3B /* AppDelegate.m in Sources */,
+				AFF5CB7B1A195756006BABBD /* EGORefreshTableHeaderView.m in Sources */,
 				AFBD23F71A0F35170005DA3B /* AFHTTPRequestOperationManager.m in Sources */,
 				AFBD23FA1A0F35170005DA3B /* AFSecurityPolicy.m in Sources */,
 				AFBD23B31A0E42870005DA3B /* main.m in Sources */,

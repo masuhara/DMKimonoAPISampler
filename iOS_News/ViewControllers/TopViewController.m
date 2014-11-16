@@ -10,9 +10,10 @@
 #import "TipsCollectionViewCell.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "EGORefreshTableHeaderView.h"
 
 @interface TopViewController ()
-
+<EGORefreshTableHeaderDelegate>
 @end
 
 @implementation TopViewController
@@ -22,10 +23,11 @@
     UIImageView *cellImageView;
     UIImageView *cellBottomImageView;
     UILabel *cellTitleLabel;
-    UIRefreshControl *refreshControl;
-    
     NSMutableArray *jsonArray;
     int numberOfArticle;
+    BOOL isReloading;
+    
+    EGORefreshTableHeaderView *headerView;
 }
 
 - (void)viewDidLoad {
@@ -59,12 +61,27 @@
     //[SVProgressHUD showWithStatus:@"読み込み中" maskType:SVProgressHUDMaskTypeGradient];
     
     // Pull to Refresh
-    newsCollectionView.alwaysBounceVertical = YES;
-    refreshControl = [UIRefreshControl new];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"更新中..."];
-    [refreshControl addTarget:self action:@selector(startRefresh:)
-             forControlEvents:UIControlEventValueChanged];
-    [newsCollectionView addSubview:refreshControl];
+    if (headerView == nil) {
+        // 更新ビューのサイズとデリゲートを指定する
+        headerView =
+        [[EGORefreshTableHeaderView alloc] initWithFrame:
+         CGRectMake(
+                    0.0f,
+                    0.0f - newsCollectionView.bounds.size.height,
+                    self.view.frame.size.width,
+                    newsCollectionView.bounds.size.height
+                    )];
+        headerView.delegate = self;
+        [newsCollectionView addSubview:headerView];
+    }
+    // 最終更新日付を記録
+    [headerView refreshLastUpdatedDate];
+    
+    // iOS7でRefresh後にNavigationBarに隠れる問題の対処
+    self.navigationController.navigationBar.translucent = NO;
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -116,6 +133,9 @@
     [cell setBackgroundColor:[UIColor colorWithRed:248/255.0f green:235/255.0f blue:245/255.0f alpha:1.0]];
     //[cell setImageView:[UIImage imageNamed:@"Xcode.png"]];
     
+    // Coner radius
+    cell.layer.cornerRadius = 9.0;
+    cell.clipsToBounds = YES;
     return cell;
 }
 
@@ -185,21 +205,54 @@
 }
 
 #pragma mark - Refresh
-- (void)startRefresh:(id)sender
-{
-    [refreshControl beginRefreshing];
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)reloadTableViewDataSource{
     
-    BOOL isSucceed = [self getInformation];
+    //  should be calling your tableviews data source model to reload
+    //  put here just for demo
+    isReloading = YES;
     
+}
+
+- (void)doneLoadingTableViewData{
+    //  model should call this when its done loading
+    isReloading = NO;
+    [headerView egoRefreshScrollViewDataSourceDidFinishedLoading:newsCollectionView];
     
-    if (isSucceed == YES) {
-        [newsCollectionView reloadData];
-        [refreshControl endRefreshing];
-    }else{
-        [newsCollectionView reloadData];
-        [refreshControl endRefreshing];
-    }
+}
+
+
+#pragma mark UIScrollViewDelegate Methods
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
+    [headerView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    [headerView egoRefreshScrollViewDidEndDragging:scrollView];
+    
+}
+
+
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view{
+    
+    [self reloadTableViewDataSource];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
+    
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view{
+    return isReloading;
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+    return [NSDate date];
 }
 
 
@@ -208,6 +261,7 @@
 {
     
 }
+
 
 
 
