@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" id="OZM-72-y4A"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="setting.png" id="OZM-72-y4A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akM-tm-QFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お気に入り" id="Ipk-ZA-dBU"/>
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="favorite.png" id="Ipk-ZA-dBU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDb-r2-46G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +92,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vet-ad-6nV">
+                                <rect key="frame" x="0.0" y="-21" width="320" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kqB-Dt-sLM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <inset key="scrollIndicatorInsets" minX="8" minY="8" maxX="0.0" maxY="8"/>
@@ -110,17 +114,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-5V-SYX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                     <color key="backgroundColor" red="0.97254901960784312" green="0.92156862745098034" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rht-OQ-dRv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                    <rect key="frame" x="8" y="56" width="80" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-r9-CCj">
-                                                    <rect key="frame" x="0.0" y="55" width="96" height="46"/>
+                                                    <rect key="frame" x="8" y="8" width="80" height="40"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -137,7 +140,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="記事一覧" id="hmi-C2-c42"/>
+                    <tabBarItem key="tabBarItem" title="記事一覧" image="news.png" id="hmi-C2-c42"/>
                     <connections>
                         <outlet property="newsCollectionView" destination="kqB-Dt-sLM" id="5K8-pW-ZYh"/>
                         <segue destination="Spd-5a-6mq" kind="push" identifier="detail" id="Teb-7h-T5K"/>
@@ -173,6 +176,11 @@
             <point key="canvasLocation" x="-65" y="-174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favorite.png" width="25" height="22"/>
+        <image name="news.png" width="22" height="23"/>
+        <image name="setting.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

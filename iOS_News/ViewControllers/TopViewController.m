@@ -11,9 +11,14 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "EGORefreshTableHeaderView.h"
+#import "KIProgressViewManager.h"
+
+
+
+
 
 @interface TopViewController ()
-<EGORefreshTableHeaderDelegate>
+<EGORefreshTableHeaderDelegate, UIAlertViewDelegate>
 @end
 
 @implementation TopViewController
@@ -82,6 +87,11 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+    
+    // KIProgressView
+    [self makeKIProgressView];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -93,6 +103,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 #pragma mark - BackGround
@@ -136,6 +147,7 @@
     // Coner radius
     cell.layer.cornerRadius = 9.0;
     cell.clipsToBounds = YES;
+    
     return cell;
 }
 
@@ -152,6 +164,9 @@
 #pragma mark - AFNetworking
 - (BOOL)getInformation
 {
+    // showKIProgressView
+    [[KIProgressViewManager manager] showProgressOnView:self.view];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     __block BOOL loadSucceed = NO;
@@ -177,17 +192,26 @@
           
           if (error) {
               //[SVProgressHUD dismiss];
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:error.localizedDescription delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データ取得エラー" message:error.localizedDescription delegate:self cancelButtonTitle:nil otherButtonTitles:@"リロード", nil];
               [alertView show];
-              
-          }else{
-              //[SVProgressHUD dismiss];
           }
           
           loadSucceed = NO;
           
       }];
     return loadSucceed;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self getInformation];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
@@ -209,10 +233,8 @@
 
 - (void)reloadTableViewDataSource{
     
-    //  should be calling your tableviews data source model to reload
-    //  put here just for demo
+    [self getInformation];
     isReloading = YES;
-    
 }
 
 - (void)doneLoadingTableViewData{
@@ -224,10 +246,9 @@
 
 
 #pragma mark UIScrollViewDelegate Methods
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
     [headerView egoRefreshScrollViewDidScroll:scrollView];
-    
 }
 
 
@@ -256,14 +277,28 @@
 }
 
 
+
+#pragma mark - KIProgressView
+
+- (void)makeKIProgressView
+{
+    // Set the color
+    [[KIProgressViewManager manager] setColor:[UIColor redColor]];
+    
+    // Set the gradient
+    [[KIProgressViewManager manager] setGradientStartColor:[UIColor blackColor]];
+    [[KIProgressViewManager manager] setGradientEndColor:[UIColor whiteColor]];
+    
+    // Currently not supported
+    [[KIProgressViewManager manager] setStyle:KIProgressViewStyleRepeated];
+}
+
+
+
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
 }
-
-
-
-
 
 @end

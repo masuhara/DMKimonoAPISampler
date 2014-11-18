@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3A10D01A1B0BB9006798AF /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10CF1A1B0BB9006798AF /* favorite@2x.png */; };
+		AF3A10D71A1B0BCD006798AF /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D11A1B0BCD006798AF /* menu@2x.png */; };
+		AF3A10D81A1B0BCD006798AF /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D21A1B0BCD006798AF /* news@2x.png */; };
+		AF3A10D91A1B0BCD006798AF /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D31A1B0BCD006798AF /* search@2x.png */; };
+		AF3A10DA1A1B0BCD006798AF /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D41A1B0BCD006798AF /* setting@2x.png */; };
+		AF3A10DB1A1B0BCD006798AF /* sort@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D51A1B0BCD006798AF /* sort@2x.png */; };
+		AF3A10DC1A1B0BCD006798AF /* wide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3A10D61A1B0BCD006798AF /* wide@2x.png */; };
+		AF63BF2B1A1B160C0066EB16 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = AF63BF2A1A1B160C0066EB16 /* icon120.png */; };
+		AF63BF2E1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF63BF2D1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf */; };
+		AF63BF301A1B2F430066EB16 /* FOT-BudoStd-L.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF63BF2F1A1B2F430066EB16 /* FOT-BudoStd-L.otf */; };
+		AF63BF321A1B30CE0066EB16 /* FOT-TsukuARdGothicStd-R.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF63BF311A1B30CE0066EB16 /* FOT-TsukuARdGothicStd-R.otf */; };
+		AFBA32C01A1AEF1B00266FDF /* DMTabMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBA32BF1A1AEF1B00266FDF /* DMTabMenu.m */; };
 		AFBD23B31A0E42870005DA3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD23B21A0E42870005DA3B /* main.m */; };
 		AFBD23B61A0E42870005DA3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD23B51A0E42870005DA3B /* AppDelegate.m */; };
 		AFBD23BC1A0E42870005DA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBD23BA1A0E42870005DA3B /* Main.storyboard */; };
@@ -29,7 +41,6 @@
 		AFBD24081A0F3AFF0005DA3B /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFBD24051A0F3AFF0005DA3B /* SVProgressHUD.bundle */; };
 		AFBD24091A0F3AFF0005DA3B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24071A0F3AFF0005DA3B /* SVProgressHUD.m */; };
 		AFBD240B1A0F4C8D0005DA3B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBD240A1A0F4C8D0005DA3B /* Default-568h@2x.png */; };
-		AFBD24101A0F53E10005DA3B /* Xcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBD240F1A0F53E10005DA3B /* Xcode@2x.png */; };
 		AFBD24141A11F5C90005DA3B /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24131A11F5C90005DA3B /* ContentViewController.m */; };
 		AFBD242D1A11F88C0005DA3B /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24221A11F88C0005DA3B /* SGProgressView.m */; };
 		AFBD242E1A11F88C0005DA3B /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD24241A11F88C0005DA3B /* UINavigationController+SGProgress.m */; };
@@ -43,6 +54,10 @@
 		AFF5CB811A195756006BABBD /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB781A195756006BABBD /* grayArrow@2x.png */; };
 		AFF5CB821A195756006BABBD /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB791A195756006BABBD /* whiteArrow.png */; };
 		AFF5CB831A195756006BABBD /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */; };
+		AFF5CB9F1A1969EC006BABBD /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5CB9E1A1969EC006BABBD /* JSBadgeView.m */; };
+		AFF5CBA51A196CB3006BABBD /* KIProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5CBA21A196CB3006BABBD /* KIProgressView.m */; };
+		AFF5CBA61A196CB3006BABBD /* KIProgressViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5CBA41A196CB3006BABBD /* KIProgressViewManager.m */; };
+		AFF5CBAA1A196EA8006BABBD /* BKZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5CBA91A196EA8006BABBD /* BKZoomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +71,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3A10CF1A1B0BB9006798AF /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
+		AF3A10D11A1B0BCD006798AF /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		AF3A10D21A1B0BCD006798AF /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
+		AF3A10D31A1B0BCD006798AF /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		AF3A10D41A1B0BCD006798AF /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		AF3A10D51A1B0BCD006798AF /* sort@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sort@2x.png"; sourceTree = "<group>"; };
+		AF3A10D61A1B0BCD006798AF /* wide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wide@2x.png"; sourceTree = "<group>"; };
+		AF63BF2A1A1B160C0066EB16 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		AF63BF2D1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FOT-KurokaneStd-EB.otf"; sourceTree = "<group>"; };
+		AF63BF2F1A1B2F430066EB16 /* FOT-BudoStd-L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FOT-BudoStd-L.otf"; path = "Images/FOT-BudoStd-L.otf"; sourceTree = "<group>"; };
+		AF63BF311A1B30CE0066EB16 /* FOT-TsukuARdGothicStd-R.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FOT-TsukuARdGothicStd-R.otf"; sourceTree = "<group>"; };
+		AFBA32BE1A1AEF1B00266FDF /* DMTabMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMTabMenu.h; path = DMTabMenu/DMTabMenu.h; sourceTree = "<group>"; };
+		AFBA32BF1A1AEF1B00266FDF /* DMTabMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMTabMenu.m; path = DMTabMenu/DMTabMenu.m; sourceTree = "<group>"; };
 		AFBD23AD1A0E42870005DA3B /* iOS_News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBD23B11A0E42870005DA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFBD23B21A0E42870005DA3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,7 +127,6 @@
 		AFBD24061A0F3AFF0005DA3B /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		AFBD24071A0F3AFF0005DA3B /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		AFBD240A1A0F4C8D0005DA3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AFBD240F1A0F53E10005DA3B /* Xcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Xcode@2x.png"; sourceTree = "<group>"; };
 		AFBD24121A11F5C90005DA3B /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		AFBD24131A11F5C90005DA3B /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		AFBD24211A11F88C0005DA3B /* SGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGProgressView.h; sourceTree = "<group>"; };
@@ -117,6 +144,14 @@
 		AFF5CB781A195756006BABBD /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		AFF5CB791A195756006BABBD /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		AFF5CB9D1A1969EC006BABBD /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
+		AFF5CB9E1A1969EC006BABBD /* JSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBadgeView.m; sourceTree = "<group>"; };
+		AFF5CBA11A196CB3006BABBD /* KIProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIProgressView.h; sourceTree = "<group>"; };
+		AFF5CBA21A196CB3006BABBD /* KIProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIProgressView.m; sourceTree = "<group>"; };
+		AFF5CBA31A196CB3006BABBD /* KIProgressViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIProgressViewManager.h; sourceTree = "<group>"; };
+		AFF5CBA41A196CB3006BABBD /* KIProgressViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIProgressViewManager.m; sourceTree = "<group>"; };
+		AFF5CBA81A196EA8006BABBD /* BKZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKZoomView.h; sourceTree = "<group>"; };
+		AFF5CBA91A196EA8006BABBD /* BKZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKZoomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +173,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF63BF2C1A1B27510066EB16 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF63BF2F1A1B2F430066EB16 /* FOT-BudoStd-L.otf */,
+				AF63BF311A1B30CE0066EB16 /* FOT-TsukuARdGothicStd-R.otf */,
+				AF63BF2D1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		AFBA32BA1A1AB3BE00266FDF /* DMTabMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AFBA32BE1A1AEF1B00266FDF /* DMTabMenu.h */,
+				AFBA32BF1A1AEF1B00266FDF /* DMTabMenu.m */,
+			);
+			name = DMTabMenu;
+			sourceTree = "<group>";
+		};
 		AFBD23A41A0E42870005DA3B = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +213,7 @@
 		AFBD23AF1A0E42870005DA3B /* iOS_News */ = {
 			isa = PBXGroup;
 			children = (
+				AF63BF2C1A1B27510066EB16 /* Fonts */,
 				AFBD240C1A0F52E90005DA3B /* Images */,
 				AFBD23FF1A0F351C0005DA3B /* libs */,
 				AFBD24111A10C8CA0005DA3B /* Root */,
@@ -235,6 +290,10 @@
 		AFBD23FF1A0F351C0005DA3B /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				AFBA32BA1A1AB3BE00266FDF /* DMTabMenu */,
+				AFF5CBA71A196EA8006BABBD /* BKZoomView */,
+				AFF5CBA01A196CB3006BABBD /* KIProgressView */,
+				AFF5CB9C1A1969EC006BABBD /* JSBadgeView */,
 				AFF5CB6D1A195756006BABBD /* EGOTableViewPullRefresh */,
 				AFBD24201A11F88C0005DA3B /* UINavigationController+SGProgress */,
 				AFBD24031A0F3AFF0005DA3B /* SVProgressHUD */,
@@ -257,7 +316,14 @@
 		AFBD240C1A0F52E90005DA3B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AFBD240F1A0F53E10005DA3B /* Xcode@2x.png */,
+				AF3A10D11A1B0BCD006798AF /* menu@2x.png */,
+				AF3A10D21A1B0BCD006798AF /* news@2x.png */,
+				AF3A10D31A1B0BCD006798AF /* search@2x.png */,
+				AF3A10D41A1B0BCD006798AF /* setting@2x.png */,
+				AF3A10D51A1B0BCD006798AF /* sort@2x.png */,
+				AF63BF2A1A1B160C0066EB16 /* icon120.png */,
+				AF3A10D61A1B0BCD006798AF /* wide@2x.png */,
+				AF3A10CF1A1B0BB9006798AF /* favorite@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -324,6 +390,35 @@
 				AFF5CB7A1A195756006BABBD /* whiteArrow@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFF5CB9C1A1969EC006BABBD /* JSBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CB9D1A1969EC006BABBD /* JSBadgeView.h */,
+				AFF5CB9E1A1969EC006BABBD /* JSBadgeView.m */,
+			);
+			path = JSBadgeView;
+			sourceTree = "<group>";
+		};
+		AFF5CBA01A196CB3006BABBD /* KIProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CBA11A196CB3006BABBD /* KIProgressView.h */,
+				AFF5CBA21A196CB3006BABBD /* KIProgressView.m */,
+				AFF5CBA31A196CB3006BABBD /* KIProgressViewManager.h */,
+				AFF5CBA41A196CB3006BABBD /* KIProgressViewManager.m */,
+			);
+			path = KIProgressView;
+			sourceTree = "<group>";
+		};
+		AFF5CBA71A196EA8006BABBD /* BKZoomView */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5CBA81A196EA8006BABBD /* BKZoomView.h */,
+				AFF5CBA91A196EA8006BABBD /* BKZoomView.m */,
+			);
+			path = BKZoomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,20 +501,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBD24101A0F53E10005DA3B /* Xcode@2x.png in Resources */,
 				AFBD23BC1A0E42870005DA3B /* Main.storyboard in Resources */,
+				AF3A10DC1A1B0BCD006798AF /* wide@2x.png in Resources */,
 				AFF5CB7F1A195756006BABBD /* blueArrow@2x.png in Resources */,
+				AF63BF321A1B30CE0066EB16 /* FOT-TsukuARdGothicStd-R.otf in Resources */,
 				AFF5CB821A195756006BABBD /* whiteArrow.png in Resources */,
+				AF3A10DB1A1B0BCD006798AF /* sort@2x.png in Resources */,
 				AFF5CB811A195756006BABBD /* grayArrow@2x.png in Resources */,
+				AF3A10D91A1B0BCD006798AF /* search@2x.png in Resources */,
 				AFBD23C11A0E42870005DA3B /* LaunchScreen.xib in Resources */,
+				AF63BF2E1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf in Resources */,
+				AF63BF301A1B2F430066EB16 /* FOT-BudoStd-L.otf in Resources */,
+				AF3A10D81A1B0BCD006798AF /* news@2x.png in Resources */,
 				AFF5CB7E1A195756006BABBD /* blueArrow.png in Resources */,
 				AFBD23BE1A0E42870005DA3B /* Images.xcassets in Resources */,
+				AF3A10D71A1B0BCD006798AF /* menu@2x.png in Resources */,
 				AFF5CB801A195756006BABBD /* grayArrow.png in Resources */,
+				AF3A10D01A1B0BB9006798AF /* favorite@2x.png in Resources */,
 				AFF5CB7C1A195756006BABBD /* blackArrow.png in Resources */,
 				AFBD240B1A0F4C8D0005DA3B /* Default-568h@2x.png in Resources */,
 				AFF5CB7D1A195756006BABBD /* blackArrow@2x.png in Resources */,
+				AF63BF2B1A1B160C0066EB16 /* icon120.png in Resources */,
 				AFF5CB831A195756006BABBD /* whiteArrow@2x.png in Resources */,
 				AFBD24081A0F3AFF0005DA3B /* SVProgressHUD.bundle in Resources */,
+				AF3A10DA1A1B0BCD006798AF /* setting@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,13 +544,18 @@
 			files = (
 				AFBD23FB1A0F35170005DA3B /* AFURLConnectionOperation.m in Sources */,
 				AFBD242D1A11F88C0005DA3B /* SGProgressView.m in Sources */,
+				AFF5CBA61A196CB3006BABBD /* KIProgressViewManager.m in Sources */,
+				AFF5CB9F1A1969EC006BABBD /* JSBadgeView.m in Sources */,
 				AFBD23F61A0F35170005DA3B /* AFHTTPRequestOperation.m in Sources */,
 				AFBD23F91A0F35170005DA3B /* AFNetworkReachabilityManager.m in Sources */,
 				AFBD23FE1A0F35170005DA3B /* AFURLSessionManager.m in Sources */,
 				AFBD23FC1A0F35170005DA3B /* AFURLRequestSerialization.m in Sources */,
+				AFF5CBA51A196CB3006BABBD /* KIProgressView.m in Sources */,
 				AFBD24021A0F389B0005DA3B /* TipsCollectionViewCell.m in Sources */,
 				AFBD23DE1A0E43E10005DA3B /* RootNavigationViewController.m in Sources */,
+				AFBA32C01A1AEF1B00266FDF /* DMTabMenu.m in Sources */,
 				AFBD23FD1A0F35170005DA3B /* AFURLResponseSerialization.m in Sources */,
+				AFF5CBAA1A196EA8006BABBD /* BKZoomView.m in Sources */,
 				AFBD23E11A0E440D0005DA3B /* RootTabBarViewController.m in Sources */,
 				AFBD24091A0F3AFF0005DA3B /* SVProgressHUD.m in Sources */,
 				AFBD23B61A0E42870005DA3B /* AppDelegate.m in Sources */,
