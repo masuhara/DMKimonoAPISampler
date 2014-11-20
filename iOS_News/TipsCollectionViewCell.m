@@ -27,6 +27,7 @@
     titleLabel.numberOfLines = 0;
     titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     titleLabel.text = text;
+    
     // Font
     titleLabel.font = [UIFont fontWithName:@"BudoStd-L" size:[UIFont systemFontSize]];
     // BudoStd-L (ぶどうフォント)

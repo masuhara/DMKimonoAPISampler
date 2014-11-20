@@ -30,9 +30,12 @@
     // make MenuView
     menuTable = [[DMTabMenu alloc] initWithFrame:CGRectMake(0, -210, self.view.frame.size.width, 210)];
     [self.view addSubview:menuTable];
-
+    
+    [[UITabBar appearance] setTintColor:[UIColor redColor]];
 
     //[UITabBar appearance].barTintColor = [UIColor brownColor];
+    
+    [self colorBarAboveTabBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,6 +92,13 @@
                      }];
 }
 
+- (void)colorBarAboveTabBar
+{
+    UIView *colorBar = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] applicationFrame].size.height - self.tabBar.frame.size.height - self.navigationController.navigationBar.frame.size.height, [[UIScreen mainScreen] applicationFrame].size.width, 0.5f)];
+    colorBar.backgroundColor = [UIColor redColor];
+    [self.view addSubview:colorBar];
+    NSLog(@"%@", NSStringFromCGRect(colorBar.frame));
+}
 
 
 @end

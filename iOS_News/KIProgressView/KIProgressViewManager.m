@@ -77,6 +77,7 @@
         return progressView;
     }
     
+    // グラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = progressView.bounds;
     gradient.startPoint = CGPointMake(0, 0);

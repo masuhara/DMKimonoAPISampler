@@ -26,6 +26,7 @@
         self.scrollEnabled = NO;
         self.rowHeight = 70;
         [self setModel];
+        [self setGesture];
     }
     return self;
 }
@@ -128,5 +129,34 @@
                      }];
 }
 
+#pragma mark - Set Gesture
+- (void)setGesture
+{
+    UISwipeGestureRecognizer* swipeGesture =
+    [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeMenu:)];
+    
+    // 左スワイプを認識するように設定
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    // ビューにジェスチャーを追加
+    [self addGestureRecognizer:swipeGesture];
+}
+
+- (void)swipeMenu:(UISwipeGestureRecognizer *)sender
+{
+    [self dismissMenu];
+}
+
+- (void)dismissMenu
+{
+    [UIView animateWithDuration:0.2f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.frame = CGRectMake(0, -210, self.frame.size.width, 210);
+                     } completion:^(BOOL finished) {
+                         NSLog(@"アニメーション終了");
+                     }];
+}
 
 @end
