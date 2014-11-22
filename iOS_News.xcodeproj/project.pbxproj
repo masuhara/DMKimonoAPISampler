@@ -71,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1FAC141A1DCB4700EC1AE0 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		AF3A10CF1A1B0BB9006798AF /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
 		AF3A10D11A1B0BCD006798AF /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		AF3A10D21A1B0BCD006798AF /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		AF3A10D41A1B0BCD006798AF /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		AF3A10D51A1B0BCD006798AF /* sort@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sort@2x.png"; sourceTree = "<group>"; };
 		AF3A10D61A1B0BCD006798AF /* wide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wide@2x.png"; sourceTree = "<group>"; };
+		AF5D75ED1A20742200C9BEC3 /* AppMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacros.h; sourceTree = "<group>"; };
 		AF63BF2A1A1B160C0066EB16 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		AF63BF2D1A1B2AF70066EB16 /* FOT-KurokaneStd-EB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FOT-KurokaneStd-EB.otf"; sourceTree = "<group>"; };
 		AF63BF2F1A1B2F430066EB16 /* FOT-BudoStd-L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FOT-BudoStd-L.otf"; path = "Images/FOT-BudoStd-L.otf"; sourceTree = "<group>"; };
@@ -213,6 +215,8 @@
 		AFBD23AF1A0E42870005DA3B /* iOS_News */ = {
 			isa = PBXGroup;
 			children = (
+				AF5D75ED1A20742200C9BEC3 /* AppMacros.h */,
+				AF1FAC141A1DCB4700EC1AE0 /* AppMacro.h */,
 				AF63BF2C1A1B27510066EB16 /* Fonts */,
 				AFBD240C1A0F52E90005DA3B /* Images */,
 				AFBD23FF1A0F351C0005DA3B /* libs */,

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "AppMacro.h"
+#import "AppMacros.h"
 @interface TopViewController : UIViewController
 <UICollectionViewDataSource, UICollectionViewDelegate>
 

@@ -17,6 +17,7 @@
 
 
 
+
 @interface TopViewController ()
 <EGORefreshTableHeaderDelegate, UIAlertViewDelegate>
 @end
@@ -49,14 +50,15 @@
     newsCollectionView.delegate   = self;
     
     // BackGroundColor (Pastel White)
-    newsCollectionView.backgroundView = [self setBackgroundView:[UIColor colorWithRed:247/255.0f green:246/255.0f blue:252/255.0f alpha:1.0]];
-    self.view.backgroundColor = [UIColor colorWithRed:247/255.0f green:246/255.0f blue:252/255.0f alpha:1.0];
-    
+    newsCollectionView.backgroundView = [self setBackgroundView:BASE_COLOR];
+    self.view.backgroundColor = BASE_COLOR;
     
     // BackGroundImage
     /*
     newsCollectionView.backgroundView = [self setBackgroundViewWithImage:[UIImage imageNamed:@""]];
      */
+    
+    
     
     if (!jsonArray) {
         jsonArray = [NSMutableArray new];
@@ -141,7 +143,7 @@
     [cell setTitle:titleArray[indexPath.row]];
     
     // Sakura Color
-    [cell setBackgroundColor:[UIColor colorWithRed:248/255.0f green:235/255.0f blue:245/255.0f alpha:1.0]];
+    [cell setBackgroundColor:CONSEPT_COLOR];
     //[cell setImageView:[UIImage imageNamed:@"Xcode.png"]];
     
     // Coner radius
